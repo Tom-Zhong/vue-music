@@ -1,5 +1,6 @@
 import originJsonp from 'jsonp'
 
+// 通过json返回请求数据，返回一个promise
 export default function jsonp (url, data, option) {
   url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
 
@@ -14,6 +15,7 @@ export default function jsonp (url, data, option) {
   })
 }
 
+// 拼接请求的query
 export function param (data) {
   let url = ''
   for (var k in data) {

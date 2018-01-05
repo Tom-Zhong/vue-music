@@ -2,7 +2,10 @@
   <div id="app">
     <m-header></m-header>
     <tab></tab>
-    <router-view></router-view>
+    <!-- 保持路由存在内存中 -->
+    <keep-alive>
+      <router-view></router-view>        
+    </keep-alive>
   </div>
 </template>
 
